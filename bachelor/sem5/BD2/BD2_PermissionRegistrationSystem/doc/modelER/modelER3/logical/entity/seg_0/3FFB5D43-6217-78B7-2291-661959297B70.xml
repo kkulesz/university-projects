@@ -1,0 +1,99 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="3FFB5D43-6217-78B7-2291-661959297B70" name="Historia wykonania czynności">
+<createdBy>Konrad Kulesza</createdBy>
+<createdTime>2020-11-07 13:08:13 UTC</createdTime>
+<ownerDesignName>modelER3</ownerDesignName>
+<engineerTo>
+<item key="05D4209F-1E9A-39F7-D1A2-6D56B2CBC029" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="ID" id="29EA7F76-C579-D177-E907-30CD49D2739B">
+<createdBy>bartlomiej</createdBy>
+<createdTime>2020-11-09 19:18:16 UTC</createdTime>
+<ownerDesignName>modelER3</ownerDesignName>
+<engineerTo>
+<item key="05D4209F-1E9A-39F7-D1A2-6D56B2CBC029" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Data" id="D6BD9A9D-94F9-0145-4C03-1BE90D7523C5">
+<createdBy>Konrad Kulesza</createdBy>
+<createdTime>2020-11-07 13:32:08 UTC</createdTime>
+<ownerDesignName>modelER3</ownerDesignName>
+<engineerTo>
+<item key="05D4209F-1E9A-39F7-D1A2-6D56B2CBC029" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Login" id="9BCD2255-49F7-452F-8EC2-448490311AF2">
+<createdBy>bartlomiej</createdBy>
+<createdTime>2020-11-09 17:18:00 UTC</createdTime>
+<generatorID>E74847DA-DD45-F403-172E-A317F8C5448A</generatorID>
+<ownerDesignName>modelER3</ownerDesignName>
+<engineerTo>
+<item key="05D4209F-1E9A-39F7-D1A2-6D56B2CBC029" value="true"/>
+</engineerTo>
+<referedAttribute>2B647712-6DCF-A6A9-2547-83B46FD5D350</referedAttribute>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Status wykonania" id="EDF6463F-6EBD-322D-4CC8-D2FEE4081878">
+<createdBy>bartlomiej</createdBy>
+<createdTime>2020-11-09 17:32:42 UTC</createdTime>
+<ownerDesignName>modelER3</ownerDesignName>
+<engineerTo>
+<item key="05D4209F-1E9A-39F7-D1A2-6D56B2CBC029" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Uwagi" id="67E33125-7CBF-D265-2E47-A4322BA71766">
+<createdBy>bartlomiej</createdBy>
+<createdTime>2020-11-09 17:32:58 UTC</createdTime>
+<ownerDesignName>modelER3</ownerDesignName>
+<engineerTo>
+<item key="05D4209F-1E9A-39F7-D1A2-6D56B2CBC029" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Numer " id="8EB82942-66D2-E68B-2D39-8BF0C0DA6E23">
+<createdBy>bartlomiej</createdBy>
+<createdTime>2020-11-09 19:17:41 UTC</createdTime>
+<generatorID>37C2B297-79AC-5BA4-998C-7186BDB0CFDE</generatorID>
+<ownerDesignName>modelER3</ownerDesignName>
+<engineerTo>
+<item key="05D4209F-1E9A-39F7-D1A2-6D56B2CBC029" value="true"/>
+</engineerTo>
+<referedAttribute>2CD053A4-F811-2260-5DC3-018849FA4D5C</referedAttribute>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="1821824C-DCE0-64BA-EF62-8781FBF86700" name="Historia wykonania czynności PK">
+<createdBy>bartlomiej</createdBy>
+<createdTime>2020-11-09 17:39:18 UTC</createdTime>
+<ownerDesignName>modelER3</ownerDesignName>
+<engineerTo>
+<item key="05D4209F-1E9A-39F7-D1A2-6D56B2CBC029" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>8EB82942-66D2-E68B-2D39-8BF0C0DA6E23</attributeRef>
+<attributeRef>29EA7F76-C579-D177-E907-30CD49D2739B</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

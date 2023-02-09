@@ -1,0 +1,69 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="B62C1278-A9E3-0C52-CBA6-45B38F1E6D2D" name="Uprawnienie stanowiska">
+<createdBy>Konrad Kulesza</createdBy>
+<createdTime>2020-11-07 12:57:34 UTC</createdTime>
+<ownerDesignName>modelER3</ownerDesignName>
+<engineerTo>
+<item key="05D4209F-1E9A-39F7-D1A2-6D56B2CBC029" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="Numer" id="B5D458D6-9394-A069-2303-D43E75D054E4">
+<createdBy>bartlomiej</createdBy>
+<createdTime>2020-11-09 17:35:15 UTC</createdTime>
+<ownerDesignName>modelER3</ownerDesignName>
+<engineerTo>
+<item key="05D4209F-1E9A-39F7-D1A2-6D56B2CBC029" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ID" id="FD208E4B-5EB8-8F12-680D-67A09D1C0D6F">
+<createdBy>bartlomiej</createdBy>
+<createdTime>2020-11-09 19:15:59 UTC</createdTime>
+<generatorID>E80540C1-F410-494C-AD62-BD56EA46E117</generatorID>
+<ownerDesignName>modelER3</ownerDesignName>
+<engineerTo>
+<item key="05D4209F-1E9A-39F7-D1A2-6D56B2CBC029" value="true"/>
+</engineerTo>
+<referedAttribute>485F6162-8105-49AD-74E7-5C3676371007</referedAttribute>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ID1" id="B360CA94-D358-ACE7-D2A0-05B29353E462">
+<createdBy>bartlomiej</createdBy>
+<createdTime>2020-11-09 19:16:23 UTC</createdTime>
+<generatorID>8FFEBA29-50C8-5B43-2907-FCFA9F3CB6E6</generatorID>
+<ownerDesignName>modelER3</ownerDesignName>
+<engineerTo>
+<item key="05D4209F-1E9A-39F7-D1A2-6D56B2CBC029" value="true"/>
+</engineerTo>
+<referedAttribute>CB6B0217-A679-E585-8956-EFE763D8D08E</referedAttribute>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="447446AD-6AA4-E3F3-0F9C-D0414CD64850" name="Uprawnienie-stanowisko PK">
+<createdBy>Konrad Kulesza</createdBy>
+<createdTime>2020-11-07 13:00:57 UTC</createdTime>
+<ownerDesignName>modelER3</ownerDesignName>
+<engineerTo>
+<item key="05D4209F-1E9A-39F7-D1A2-6D56B2CBC029" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>B5D458D6-9394-A069-2303-D43E75D054E4</attributeRef>
+<attributeRef>FD208E4B-5EB8-8F12-680D-67A09D1C0D6F</attributeRef>
+<attributeRef>B360CA94-D358-ACE7-D2A0-05B29353E462</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

@@ -1,0 +1,77 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="280880EC-026A-7C10-B044-F77973F2C533" name="Konto pracownika">
+<createdBy>Konrad Kulesza</createdBy>
+<createdTime>2020-11-07 12:53:50 UTC</createdTime>
+<ownerDesignName>modelER3</ownerDesignName>
+<engineerTo>
+<item key="05D4209F-1E9A-39F7-D1A2-6D56B2CBC029" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="Numer identyfikacyjny" id="81AE3725-13E3-7434-AF32-D12F37033D9B">
+<createdBy>Konrad Kulesza</createdBy>
+<createdTime>2020-11-07 13:02:59 UTC</createdTime>
+<generatorID>E200E5B6-4626-B390-01A3-270C920BF467</generatorID>
+<ownerDesignName>modelER3</ownerDesignName>
+<engineerTo>
+<item key="05D4209F-1E9A-39F7-D1A2-6D56B2CBC029" value="true"/>
+</engineerTo>
+<referedAttribute>7AC4F8AC-7149-7E4A-E2BA-EA1C3510F013</referedAttribute>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Login" id="2B647712-6DCF-A6A9-2547-83B46FD5D350">
+<createdBy>Konrad Kulesza</createdBy>
+<createdTime>2020-11-07 13:19:49 UTC</createdTime>
+<ownerDesignName>modelER3</ownerDesignName>
+<engineerTo>
+<item key="05D4209F-1E9A-39F7-D1A2-6D56B2CBC029" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Hasło" id="76249641-BC56-DF26-71FB-4CC88C1BC97A">
+<createdBy>Konrad Kulesza</createdBy>
+<createdTime>2020-11-07 13:20:05 UTC</createdTime>
+<ownerDesignName>modelER3</ownerDesignName>
+<engineerTo>
+<item key="05D4209F-1E9A-39F7-D1A2-6D56B2CBC029" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ID" id="8E3DEAB8-57AF-8CEB-F8E6-FBDB97829554">
+<createdBy>bartlomiej</createdBy>
+<createdTime>2020-11-09 19:16:23 UTC</createdTime>
+<generatorID>2EC20DED-93F7-A22A-FDC9-8B406A5CFE3E</generatorID>
+<ownerDesignName>modelER3</ownerDesignName>
+<engineerTo>
+<item key="05D4209F-1E9A-39F7-D1A2-6D56B2CBC029" value="true"/>
+</engineerTo>
+<referedAttribute>CB6B0217-A679-E585-8956-EFE763D8D08E</referedAttribute>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="1188479D-1142-FD99-E154-EE13BB5D6584" name="Konto pracownika PK">
+<createdBy>Konrad Kulesza</createdBy>
+<createdTime>2020-11-07 13:02:03 UTC</createdTime>
+<ownerDesignName>modelER3</ownerDesignName>
+<engineerTo>
+<item key="05D4209F-1E9A-39F7-D1A2-6D56B2CBC029" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>2B647712-6DCF-A6A9-2547-83B46FD5D350</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

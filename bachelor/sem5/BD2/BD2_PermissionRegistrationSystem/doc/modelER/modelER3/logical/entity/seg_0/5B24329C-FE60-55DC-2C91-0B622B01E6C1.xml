@@ -1,0 +1,100 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="5B24329C-FE60-55DC-2C91-0B622B01E6C1" name="Historia nadania uprawnienia">
+<createdBy>Konrad Kulesza</createdBy>
+<createdTime>2020-11-07 13:17:24 UTC</createdTime>
+<ownerDesignName>modelER3</ownerDesignName>
+<engineerTo>
+<item key="05D4209F-1E9A-39F7-D1A2-6D56B2CBC029" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="Numer akcji" id="0CF4B27E-B2E1-A284-9632-92003E33FB5C">
+<createdBy>bartlomiej</createdBy>
+<createdTime>2020-11-09 17:32:08 UTC</createdTime>
+<ownerDesignName>modelER3</ownerDesignName>
+<engineerTo>
+<item key="05D4209F-1E9A-39F7-D1A2-6D56B2CBC029" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Data" id="2E9C0362-E3F4-8AE4-B3F9-509763795358">
+<createdBy>Konrad Kulesza</createdBy>
+<createdTime>2020-11-07 13:18:27 UTC</createdTime>
+<ownerDesignName>modelER3</ownerDesignName>
+<engineerTo>
+<item key="05D4209F-1E9A-39F7-D1A2-6D56B2CBC029" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Określenie akcji" id="DF322B69-893B-44F0-441D-3490AD416965">
+<createdBy>Konrad Kulesza</createdBy>
+<createdTime>2020-11-07 13:18:34 UTC</createdTime>
+<ownerDesignName>modelER3</ownerDesignName>
+<engineerTo>
+<item key="05D4209F-1E9A-39F7-D1A2-6D56B2CBC029" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Login" id="4A490C8F-B858-7F70-97C1-4CB88ACA1F4D">
+<createdBy>bartlomiej</createdBy>
+<createdTime>2020-11-09 17:18:00 UTC</createdTime>
+<generatorID>DE3F1558-9C8F-0E20-7A17-A9F9573F34B6</generatorID>
+<ownerDesignName>modelER3</ownerDesignName>
+<engineerTo>
+<item key="05D4209F-1E9A-39F7-D1A2-6D56B2CBC029" value="true"/>
+</engineerTo>
+<referedAttribute>2B647712-6DCF-A6A9-2547-83B46FD5D350</referedAttribute>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Uzasadnienie" id="D6086F9A-BEAB-4DB2-F361-B42806887D76">
+<createdBy>bartlomiej</createdBy>
+<createdTime>2020-11-09 17:31:44 UTC</createdTime>
+<ownerDesignName>modelER3</ownerDesignName>
+<engineerTo>
+<item key="05D4209F-1E9A-39F7-D1A2-6D56B2CBC029" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ID" id="4D4B71D6-41D9-46E9-973D-5E6FF56184DD">
+<createdBy>bartlomiej</createdBy>
+<createdTime>2020-11-09 19:15:59 UTC</createdTime>
+<generatorID>0086E734-4601-A0FC-BD5B-56421C755699</generatorID>
+<ownerDesignName>modelER3</ownerDesignName>
+<engineerTo>
+<item key="05D4209F-1E9A-39F7-D1A2-6D56B2CBC029" value="true"/>
+</engineerTo>
+<referedAttribute>485F6162-8105-49AD-74E7-5C3676371007</referedAttribute>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="8F1420F7-4C40-C826-8F1B-C2DE00F0B1D4" name="Historia nadania uprawnienia PK">
+<createdBy>bartlomiej</createdBy>
+<createdTime>2020-11-09 17:32:18 UTC</createdTime>
+<ownerDesignName>modelER3</ownerDesignName>
+<engineerTo>
+<item key="05D4209F-1E9A-39F7-D1A2-6D56B2CBC029" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>0CF4B27E-B2E1-A284-9632-92003E33FB5C</attributeRef>
+<attributeRef>4A490C8F-B858-7F70-97C1-4CB88ACA1F4D</attributeRef>
+<attributeRef>4D4B71D6-41D9-46E9-973D-5E6FF56184DD</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

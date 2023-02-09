@@ -1,0 +1,21 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Relation_28" directorySegmentName="seg_0" id="717690B8-6E8E-14BB-2445-A823B822AEE9">
+<createdBy>Konrad Kulesza</createdBy>
+<createdTime>2020-11-11 09:24:45 UTC</createdTime>
+<ownerDesignName>modelER3</ownerDesignName>
+<engineerTo>
+<item key="05D4209F-1E9A-39F7-D1A2-6D56B2CBC029" value="true"/>
+</engineerTo>
+<targetPk>4991CD47-0F84-633B-F1D3-B17D839266D7</targetPk>
+<identifying>false</identifying>
+<nameOnSource>być przełożonym</nameOnSource>
+<nameOnTarget>podlegać</nameOnTarget>
+<optionalSource>true</optionalSource>
+<optionalTarget>true</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>B339CB6A-A815-7297-D319-F5577C9E2F9D</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>B339CB6A-A815-7297-D319-F5577C9E2F9D</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

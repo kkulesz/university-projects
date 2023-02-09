@@ -1,0 +1,68 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="E093F395-A93F-54A3-D66F-6F0104CA2CB7" name="Pole">
+<createdBy>Konrad Kulesza</createdBy>
+<createdTime>2020-11-07 13:05:48 UTC</createdTime>
+<ownerDesignName>modelER3</ownerDesignName>
+<engineerTo>
+<item key="05D4209F-1E9A-39F7-D1A2-6D56B2CBC029" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="Login" id="B5B532AD-6B09-C60F-5126-71A96842BD7F">
+<createdBy>bartlomiej</createdBy>
+<createdTime>2020-11-09 17:18:00 UTC</createdTime>
+<generatorID>1841A036-C327-6062-E089-A4237A85964A</generatorID>
+<ownerDesignName>modelER3</ownerDesignName>
+<engineerTo>
+<item key="05D4209F-1E9A-39F7-D1A2-6D56B2CBC029" value="true"/>
+</engineerTo>
+<referedAttribute>2B647712-6DCF-A6A9-2547-83B46FD5D350</referedAttribute>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Numer porządkowy" id="045BF4AF-DF7B-EF55-DD9E-2A94BA8AF67B">
+<createdBy>bartlomiej</createdBy>
+<createdTime>2020-11-09 17:20:16 UTC</createdTime>
+<ownerDesignName>modelER3</ownerDesignName>
+<engineerTo>
+<item key="05D4209F-1E9A-39F7-D1A2-6D56B2CBC029" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ID" id="F6CFD284-7BAC-6C12-7C96-6C04F8ACC1AF">
+<createdBy>bartlomiej</createdBy>
+<createdTime>2020-11-09 17:20:55 UTC</createdTime>
+<generatorID>C7CBA00A-7C2F-02B5-1841-FF7E876602D3</generatorID>
+<ownerDesignName>modelER3</ownerDesignName>
+<engineerTo>
+<item key="05D4209F-1E9A-39F7-D1A2-6D56B2CBC029" value="true"/>
+</engineerTo>
+<referedAttribute>CA266339-97C2-2240-FEE7-2C0285C25E98</referedAttribute>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="F6F0D230-5992-A133-D3D4-A85F87C32AEF" name="Pole PK">
+<createdBy>bartlomiej</createdBy>
+<createdTime>2020-11-09 16:34:30 UTC</createdTime>
+<ownerDesignName>modelER3</ownerDesignName>
+<engineerTo>
+<item key="05D4209F-1E9A-39F7-D1A2-6D56B2CBC029" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>B5B532AD-6B09-C60F-5126-71A96842BD7F</attributeRef>
+<attributeRef>045BF4AF-DF7B-EF55-DD9E-2A94BA8AF67B</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

@@ -1,0 +1,88 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="B339CB6A-A815-7297-D319-F5577C9E2F9D" name="Pracownik">
+<createdBy>Konrad Kulesza</createdBy>
+<createdTime>2020-11-07 12:53:37 UTC</createdTime>
+<ownerDesignName>modelER3</ownerDesignName>
+<engineerTo>
+<item key="05D4209F-1E9A-39F7-D1A2-6D56B2CBC029" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="Numer identyfikacyjny" id="7AC4F8AC-7149-7E4A-E2BA-EA1C3510F013">
+<createdBy>Konrad Kulesza</createdBy>
+<createdTime>2020-11-07 13:02:51 UTC</createdTime>
+<ownerDesignName>modelER3</ownerDesignName>
+<engineerTo>
+<item key="05D4209F-1E9A-39F7-D1A2-6D56B2CBC029" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Imie" id="ABDFB0E5-3112-6D90-9B63-CE2746FD5026">
+<createdBy>Konrad Kulesza</createdBy>
+<createdTime>2020-11-07 13:03:01 UTC</createdTime>
+<ownerDesignName>modelER3</ownerDesignName>
+<engineerTo>
+<item key="05D4209F-1E9A-39F7-D1A2-6D56B2CBC029" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Nazwisko" id="88CE74D4-89DB-F81E-8F10-9D17D9882382">
+<createdBy>Konrad Kulesza</createdBy>
+<createdTime>2020-11-07 13:03:14 UTC</createdTime>
+<ownerDesignName>modelER3</ownerDesignName>
+<engineerTo>
+<item key="05D4209F-1E9A-39F7-D1A2-6D56B2CBC029" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ID" id="B807D65A-EE0C-9278-4C85-E86DCC5197F6">
+<createdBy>bartlomiej</createdBy>
+<createdTime>2020-11-09 19:16:37 UTC</createdTime>
+<generatorID>424D4876-76EC-5E56-FAEC-6D2447ED595C</generatorID>
+<ownerDesignName>modelER3</ownerDesignName>
+<engineerTo>
+<item key="05D4209F-1E9A-39F7-D1A2-6D56B2CBC029" value="true"/>
+</engineerTo>
+<referedAttribute>CE97F5DE-D30D-9226-CD3B-158210C888EC</referedAttribute>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Numer identyfikacyjny1" id="F5D91280-08DD-CA9B-A1EC-61DA4BAE0538">
+<createdBy>Konrad Kulesza</createdBy>
+<createdTime>2020-11-11 09:24:45 UTC</createdTime>
+<generatorID>717690B8-6E8E-14BB-2445-A823B822AEE9</generatorID>
+<ownerDesignName>modelER3</ownerDesignName>
+<engineerTo>
+<item key="05D4209F-1E9A-39F7-D1A2-6D56B2CBC029" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<referedAttribute>7AC4F8AC-7149-7E4A-E2BA-EA1C3510F013</referedAttribute>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="4991CD47-0F84-633B-F1D3-B17D839266D7" name="Pracownik PK">
+<createdBy>Konrad Kulesza</createdBy>
+<createdTime>2020-11-07 13:02:58 UTC</createdTime>
+<ownerDesignName>modelER3</ownerDesignName>
+<engineerTo>
+<item key="05D4209F-1E9A-39F7-D1A2-6D56B2CBC029" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>7AC4F8AC-7149-7E4A-E2BA-EA1C3510F013</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>
