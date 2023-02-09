@@ -1,0 +1,15 @@
+@model lab2and3.Models.DomainModel.Activity;
+
+<div>
+    <label>@Model.Code</label>
+    <br/>
+    <label>@Model.Date.ToString("dd-MM-yyyy")</label>
+    <br/>
+    <label>@Model.Description</label>
+</div>
+
+<br><br><br>
+
+<form asp-action="MonthSummary" style="width: 30%;">
+    <button type="submit" class="btn btn-primary">Back</button>
+</form>

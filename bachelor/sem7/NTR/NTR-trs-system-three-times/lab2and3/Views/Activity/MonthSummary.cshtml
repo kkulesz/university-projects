@@ -1,0 +1,135 @@
+@model lab2and3.Models.ViewModel.MonthSummary;
+
+<div class="text-center">
+    <h1 class="display-4" style="margin-bottom: 2rem;">Activities</h1>
+
+    @if (!@Model.Month.Frozen)
+    {
+        <div align="center">
+            <form asp-action="CreateActivityForm">
+                <button type="submit" class="btn btn-primary" style="margin: 2px 3px;">Create new activity</button>
+            </form>
+        </div>
+    }
+
+    </br>
+    </br>
+    <hr>
+    </br>
+
+    <div>
+        <h3 style="margin-bottom: 1rem;" align="center">Activities: @Model.Month.Year-@Model.Month.Month</h3>
+    </div>
+    @if (!@Model.Month.Frozen)
+    {
+        <div align="center">
+            <form asp-action="AcceptMonth">
+                <input type="hidden" name="date" value=@Model.Month.ThisMonth()>
+                <button type="submit" class="btn btn-primary" style="margin: 2px 3px;">Accept this month!</button>
+            </form>
+        </div>
+    }
+    else
+    {
+        <div>Month accepted!</div>
+    }
+
+    <div>
+        <div style="float: left;" align="left">
+            <form asp-action="MonthSummary">
+                <input type="hidden" name="date" value=@Model.Month.PreviousMonth()>
+                <button type="submit" class="btn btn-primary" style="margin: 2px 3px;">Previous month</button>
+            </form>
+        </div>
+        <div align="right">
+            <form asp-action="MonthSummary">
+                <input type="hidden" name="date" value=@Model.Month.NextMonth()>
+                <button type="submit" class="btn btn-primary" style="margin: 2px 3px;">Next month</button>
+            </form>
+        </div>
+    </div>
+
+    </br>
+    </br>
+    <hr>
+    </br>
+
+    <div class="btn-group">
+
+        @if (!@Model.ProjectActivitiesList.Any())
+        {
+            <div> No activities this month ;)</div>
+        }
+        @foreach (var projectActivities in Model.ProjectActivitiesList)
+        {
+            <div>Project: @projectActivities.ProjectName</div>
+            <table style="border: 1px solid black; border-collapse: collapse;">
+
+                <tr>
+                    <td>Activity code</td>
+                    <td>Budget</td>
+                    <td>Accepted budget</td>
+                    <td>Description</td>
+                    <td>Date</td>
+                    <td>Show</td>
+                    <td>Delete</td>
+                    <td>Update</td>
+
+                </tr>
+                @foreach (var activity in projectActivities.Activities)
+                {
+                    <tr>
+                        <td>
+                            @activity.Code
+                        </td>
+                        <td>
+                            @activity.Budget
+                        </td>
+                        <td>
+                            @(activity.AcceptedBudget.HasValue ? activity.AcceptedBudget.ToString() : "---")
+                        </td>
+                        <td>
+                            @activity.Description
+                        </td>
+                        <td>
+                            @activity.Date.ToString("yyyy-MM-dd")
+                        </td>
+                        <td>
+                            <form asp-action="ShowActivity">
+                                <input type="hidden" name="code" value=@activity.Code>
+                                <button type="submit" class="btn btn-primary" style="margin: 2px 3px;">Show</button>
+                            </form>
+                        </td>
+
+                        @if (@activity.IsActive)
+                        {
+
+                            <td>
+                                <form asp-action="DeleteActivity">
+                                    <input type="hidden" name="code" value=@activity.Code>
+                                    <button type="submit" class="btn btn-primary" style="margin: 2px 3px;">Delete</button>
+                                </form>
+                            </td>
+                            <td>
+                                <form asp-action="UpdateActivityForm">
+                                    <input type="hidden" name="code" value=@activity.Code>
+                                    <button type="submit" class="btn btn-primary" style="margin: 2px 3px;">Update</button>
+                                </form>
+                            </td>
+                        }else{
+                            <td>---</td>
+                            <td>---</td>
+                        }
+                    </tr>
+                }
+            </table>
+            <br /><br />
+        }
+
+        <br>
+        <br>
+        <br>
+        <br>
+    </div>
+
+</div>

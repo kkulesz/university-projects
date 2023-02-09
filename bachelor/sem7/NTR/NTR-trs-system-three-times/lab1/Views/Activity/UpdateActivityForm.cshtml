@@ -1,0 +1,42 @@
+@model lab1.Models.DomainModel.Activity;
+
+<form asp-action="UpdateActivity" style="width: 30%;">
+    <div>
+        <input type="hidden" name="code" class="form-control" value=@Model.Code>
+    </div>
+    <div>
+        <input type="hidden" name="projectName" class="form-control" value=@Model.ProjectName>
+    </div>
+    <div>
+        <input type="hidden" name="acceptedBudget" class="form-control" value=@Model.AcceptedBudget>
+    </div>
+    <div>
+        <input type="hidden" name="executorName" class="form-control" value=@Model.ExecutorName>
+    </div>
+    <div>
+        <input type="hidden" name="isActive" class="form-control" value=@Model.IsActive>
+    </div>
+    <div>
+        <label>Budget</label>
+        <input name="budget" class="form-control" value=@Model.Budget>
+    </div>
+    <div class="input-group date" data-provide="datepicker">
+        <label>Date</label>
+        <input type="text" class="form-control" name="date" value=@Model.Date>
+        <div class="input-group-addon">
+            <span class="glyphicon glyphicon-th"></span>
+        </div>
+    </div>
+    <div>
+        <label>Description</label>
+        <input name="description" class="form-control" value=@Model.Description>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Update</button>
+</form>
+
+<br><br><br>
+
+<form asp-action="MonthSummary" style="width: 30%;">
+    <button type="submit" class="btn btn-primary">Back</button>
+</form>

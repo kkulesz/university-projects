@@ -1,0 +1,40 @@
+@model lab2and3.Models.DomainModel.Activity;
+
+@using (Html.BeginForm("UpdateActivity", "Activity", FormMethod.Post))
+{
+    @Html.ValidationSummary(true)
+    @Html.HiddenFor(model => model.Id)
+    @Html.HiddenFor(model => model.RowVersion)
+    @Html.HiddenFor(model => model.Project)
+    @Html.HiddenFor(model => model.Code)
+    @Html.HiddenFor(model => model.IsActive)
+    @Html.HiddenFor(model => model.CreatedAt)
+    @Html.HiddenFor(model => model.Executor)
+    
+    <div class="form-group">
+        @Html.LabelFor(model => model.Date)
+        <input class="text-box single-line" data-val="true" data-val-required="The Date field is required." id="Date"
+                   max=@DateTime.Now.ToString("yyyy-MM-dd") name="Date" type="date" value=@Model.Date.ToString("yyyy-MM-dd")>
+        @Html.ValidationMessageFor(model => model.Date, "", new {@class = "text-danger"})
+    </div>
+    
+    <div class="form-group">
+        @Html.LabelFor(model => model.Budget, htmlAttributes:new{@class = "control-label col-md2", @type="number"})
+        @Html.EditorFor(model => model.Budget, new {htmlAttributes = new {@class = "form-control"}})
+        @Html.ValidationMessageFor(model => model.Budget, "", new {@class = "text-danger"})
+    </div>
+    
+    <div class="form-group">
+        @Html.LabelFor(model => model.Description, htmlAttributes:new{@class = "control-label col-md2"})
+        @Html.EditorFor(model => model.Description, new {htmlAttributes = new {@class = "form-control"}})
+        @Html.ValidationMessageFor(model => model.Description, "", new {@class = "text-danger"})
+    </div>
+        
+    <button class="btn btn-primary">Save Activity</button>
+}
+
+<br><br><br>
+
+<form asp-action="MonthSummary" style="width: 30%;">
+    <button type="submit" class="btn btn-primary">Back</button>
+</form>

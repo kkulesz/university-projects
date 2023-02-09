@@ -1,0 +1,75 @@
+@model lab1.Models.ViewModel.ProjectSummaryWithMonth;
+<div>
+    <h3>Project: @Model.Summary.ProjectName</h3>
+    <h4>@Model.Month.Year-@Model.Month.Month</h4>
+    <div style="float:left; display:block; padding: 0 5px;">
+        Declared=@Model.Summary.OwnerDefinedBudget
+    </div>
+    <div style="float:left; display:block; padding: 0 5px;">
+        Participants=@Model.Summary.ParticipantsDefinedBudget
+    </div>
+    <div style="padding: 0 5px;">
+        Summed=@(Model.Summary.OwnerDefinedBudget-Model.Summary.ParticipantsDefinedBudget)
+    </div>
+    <div>
+        <div style="float: left;" align="left">
+            <form asp-action="ProjectSummaryForMonth">
+                <input type="hidden" name="date" value=@Model.Month.PreviousMonth()>
+                <input type="hidden" name="projectName" value=@Model.Summary.ProjectName>
+                <button type="submit" class="btn btn-primary" style="margin: 2px 3px;">Previous month</button>
+            </form>
+        </div>
+        <div align="right">
+            <form asp-action="ProjectSummaryForMonth">
+                <input type="hidden" name="date" value=@Model.Month.NextMonth()>
+                <input type="hidden" name="projectName" value=@Model.Summary.ProjectName>
+                <button type="submit" class="btn btn-primary" style="margin: 2px 3px;">Next month</button>
+            </form>
+        </div>
+    </div>
+
+
+    @if (Model.Summary.Activities.Any())
+    {
+        <table>
+            <tr>
+                <td>Executor</td>
+                <td>Code</td>
+                <td>Budget</td>
+                <td>AcceptedBudget</td>
+                <td>Description</td>
+                <td>change budget</td>
+            </tr>
+            @foreach (var activity in Model.Summary.Activities)
+            {
+                <tr>
+                    <td>@activity.ExecutorName</td>
+                    <td>@activity.Code</td>
+                    <td>@activity.Budget</td>
+                    <td>@(activity.AcceptedBudget.HasValue ? activity.AcceptedBudget : "---")</td>
+                    <td>@activity.Description</td>
+                    <td>
+                        @if (!@activity.IsActive)
+                        {
+                            <form asp-action="UpdateActivityAcceptedBudgetForm">
+                                <input type="hidden" name="activityCode" value=@activity.Code>
+                                <button type="submit" class="btn btn-primary" style="margin: 2px 3px;">update
+                                    activity</button>
+                            </form>
+                        }
+                        else
+                        {
+                            <div>NotAccepted!</div>
+                        }
+                    </td>
+                </tr>
+            }
+        </table>
+    }
+
+</div>
+<br /><br />
+
+<form asp-action="SelectMonthAndProjectName" style="width: 30%;">
+    <button type="submit" class="btn btn-primary">Back</button>
+</form>

@@ -1,0 +1,41 @@
+@model List<string>;
+
+<form asp-action="CreateActivity" style="width: 30%;">
+    <div>
+        <label>Activity code</label>
+        <input name="code" class="form-control">
+    </div>
+    <div>
+        <br />
+        <label for="projectName">Project:</label>
+        <select name="projectName">
+            @foreach (var projectName in @Model)
+            {
+                <option value=@projectName>@projectName</option>
+            }
+        </select>
+    </div>
+    <div>
+        <label>Budget</label>
+        <input name="budget" class="form-control">
+    </div>
+    <div class="input-group date" data-provide="datepicker">
+        <label>Date</label>
+        <input type="text" class="form-control" name="date">
+        <div class="input-group-addon">
+            <span class="glyphicon glyphicon-th"></span>
+        </div>
+    </div>
+    <div>
+        <label>Description</label>
+        <input name="description" class="form-control">
+    </div>
+    <br>
+    <button type="submit" class="btn btn-primary">Create</button>
+</form>
+
+<br><br><br>
+
+<form asp-action="MonthSummary" style="width: 30%;">
+    <button type="submit" class="btn btn-primary">Back</button>
+</form>

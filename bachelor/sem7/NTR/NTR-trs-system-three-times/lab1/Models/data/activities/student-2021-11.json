@@ -1,0 +1,13 @@
+[
+  {
+    "Code": "lab1",
+    "ProjectName": "NTR",
+    "ExecutorName": "student",
+    "Budget": 150,
+    "AcceptedBudget": 10,
+    "Date": "2021-11-24T00:00:00",
+    "Subactivities": [],
+    "Description": "czasochlonne",
+    "IsActive": false
+  }
+]

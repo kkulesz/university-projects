@@ -1,0 +1,23 @@
+@model List<string>;
+
+<form asp-action="ProjectSummaryForMonth" style="width: 30%;">
+    <div class="input-group date" data-provide="datepicker">
+        <label>Date</label>
+        <input type="text" class="form-control" name="date">
+        <div class="input-group-addon">
+            <span class="glyphicon glyphicon-th"></span>
+        </div>
+    </div>
+    <div>
+        <br />
+        <label for="projectName">Project:</label>
+        <select name="projectName">
+            @foreach (var projectName in @Model)
+            {
+                <option value=@projectName>@projectName</option>
+            }
+        </select>
+    </div>
+    <br>
+    <button type="submit" class="btn btn-primary">Select</button>
+</form>

@@ -1,0 +1,41 @@
+﻿@model lab2and3.Models.ViewModel.UsersWithMessage;
+@{
+
+  ViewData["Title"] = "NTR21";
+  Layout = "_AuthLayout";
+}
+
+
+<div class="text-center">
+  <h1 class="display-4">Konrad Kulesza</h1>
+  <p>NTR21Z - TimeReportingSystem</p>
+</div>
+
+<h3 style="margin-bottom: 1rem;">@Model.Message</h3>
+
+<br>
+<div class="container">
+  <div class="row">
+    @foreach (var user in Model.Users)
+    {
+      <form asp-controller="Auth" asp-action="Login" class="form-inline">
+        <div>
+          <input type="hidden" name="login" class="form-control" value=@user.Login>
+        </div>
+        <button type="submit" class="btn btn-primary" style="margin: 10px;">@user.Login</button>
+      </form>
+    }
+  </div>
+</div>
+
+<br>
+<br>
+<br>
+
+<form asp-controller="Auth" asp-action="Register" method="POST">
+  <div>
+    <label class="form-label">Register</label>
+    <input name="Login" class="form-control">
+  </div>
+  <button type="submit" class="btn btn-primary">Register</button>
+</form>
