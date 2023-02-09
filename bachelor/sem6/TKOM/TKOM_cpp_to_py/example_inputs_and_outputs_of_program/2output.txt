@@ -1,0 +1,3 @@
+Warning! SemanticAnalyzer: no return statement in function - fun!
+Error! SemanticAnalyzer: invalid types of args in function(fun) arguments:
+	 expected [bool, int, string], but got [string, int, bool]!

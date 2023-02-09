@@ -1,0 +1,14 @@
+#include<string>
+#include<iostream>
+
+int fun(bool zm1, int zm2, std::string zm3){
+    std::cout<<zm1<<std::endl;
+
+
+}
+
+int main(){
+    std::string zm1 = "nanan"
+    int zm2 = 121;
+    bool zm3 = true;
+}

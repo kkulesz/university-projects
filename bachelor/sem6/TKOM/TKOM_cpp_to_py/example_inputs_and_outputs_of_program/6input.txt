@@ -1,0 +1,28 @@
+#include<string>
+#include<iostream>
+
+
+std::string fun1(){
+
+    std::cout<<"fun1()";
+}
+
+bool fun2(){
+    std::cout<<"fun2()"<<std::endl;
+}
+
+int fun3(){
+    std::cout<<"fun3()"<<std::endl;
+}
+
+int main(){
+    int number1=12;
+    int number2;
+
+    std::string str1 = "lalalala";
+    std::string str2;
+
+    bool bool1 = true;
+    bool bool2;
+
+}

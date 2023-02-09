@@ -1,0 +1,2 @@
+Warning! Parser: line:5 column:16 -- overwritten C++ keyword: auto - input cpp file is not able to compile!
+Error! SemanticAnalyzer: invalid type, expected: int, but got string!

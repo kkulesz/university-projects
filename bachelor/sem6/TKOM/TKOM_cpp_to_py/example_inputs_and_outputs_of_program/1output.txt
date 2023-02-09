@@ -1,0 +1,2 @@
+Warning! Parser: line:5 column:17 -- overwritten C++ keyword: auto - input cpp file is not able to compile!
+Error! Parser: line:6 column:24 -- overwritten Python keyword-try!

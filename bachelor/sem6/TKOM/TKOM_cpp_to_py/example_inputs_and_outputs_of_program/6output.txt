@@ -1,0 +1,28 @@
+Warning! Parser: line:22 column:6 -- uninitialized variable: number2 - inserting default value!
+Warning! Parser: line:25 column:6 -- uninitialized variable: str2 - inserting default value!
+Warning! Parser: line:28 column:2 -- uninitialized variable: bool2 - inserting default value!
+Warning! SemanticAnalyzer: no return statement in function - fun1!
+Warning! SemanticAnalyzer: no return statement in function - fun2!
+Warning! SemanticAnalyzer: no return statement in function - fun3!
+Warning! SemanticAnalyzer: no return statement in function - main!
+
+def fun1():
+    print("fun1()", end="")
+
+def fun2():
+    print("fun2()")
+
+def fun3():
+    print("fun3()")
+
+def main():
+    number1 = 12
+    number2 = 0
+    str1 = "lalalala"
+    str2 = ""
+    bool1 = True
+    bool2 = False
+
+
+if __name__ == "__main__":
+    main()

@@ -1,0 +1,9 @@
+output string:napis; integer:12; float:12.12
+input string:*; integer:==12; float:* 100
+
+output integer:130; integer:121; integer:150
+
+read  integer:>=130; integer:==121; integer:<=150 100
+read  integer:*;     integer:*;     integer:*     100
+input integer:>=130; integer:==121; integer:<=150 2
+read  integer:>=130; integer:==121; integer:<=150 2

@@ -1,0 +1,8 @@
+#include<string>
+#include<iostream>
+
+int main(){
+    int auto = 12;
+    std::string try = "";
+    bool zmienna = false;
+}

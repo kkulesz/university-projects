@@ -1,0 +1,25 @@
+#include<string>
+#include<iostream>
+
+int fun(bool zm1, int zm2, std::string zm3){
+    std::cout<<zm1<<std::endl;
+    return 21;
+}
+
+int main(){
+    std::string zm1 = "nanan";
+    int zm2 = 121;
+    bool zm3 = true;
+    while(true){
+        while(false){
+            while(true){
+                if(false){
+                    if(true){
+                        fun(zm3, zm2, zm1);
+                        return 0;
+                    }
+                }
+            }
+        }
+    }
+}

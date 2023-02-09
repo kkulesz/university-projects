@@ -1,0 +1,19 @@
+def fun(zm1, zm2, zm3):
+    print(zm1)
+    return 21
+
+def main():
+    zm1 = "nanan"
+    zm2 = 121
+    zm3 = True
+    while True:
+        while False:
+            while True:
+                if False:
+                    if True:
+                        fun(zm3, zm2, zm1)
+                        return 0
+
+
+if __name__ == "__main__":
+    main()

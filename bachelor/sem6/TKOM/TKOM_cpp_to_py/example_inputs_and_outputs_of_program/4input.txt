@@ -1,0 +1,12 @@
+#include<string>
+#include<iostream>
+
+
+int main(){
+    int number= 21+23+23+241+123+12412+1231231+1231321;
+    std::string strring = "sssssssssssssssssXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDd\n\n\n\n\n\n";
+    std::cout<<strring;
+    std::cout<<number<<std::endl;
+    number = 21*(23+21)*(231+123123);
+
+}

@@ -1,0 +1,12 @@
+Warning! SemanticAnalyzer: no return statement in function - main!
+
+def main():
+    number = 21 + 23 + 23 + 241 + 123 + 12412 + 1231231 + 1231321
+    strring = "sssssssssssssssssXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDd\n\n\n\n\n\n"
+    print(strring, end="")
+    print(number)
+    number = 21 * (23 + 21) * (231 + 123123)
+
+
+if __name__ == "__main__":
+    main()

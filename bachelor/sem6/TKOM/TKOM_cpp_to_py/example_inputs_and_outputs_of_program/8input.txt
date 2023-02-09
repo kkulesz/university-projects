@@ -1,0 +1,19 @@
+def main():
+    number = 12121212
+    if True:
+        # bbbbbbbbbbbbbbbbbbbbbbbbbbbaaaaaaaaaaaaaaaaaaarrrrrrrrrrrrrdzo nudny komentarz
+        '''
+
+        jest tez komentarze
+        wielonilijnowy
+
+
+        i jeszcze cos tak
+
+        '''
+        print("rarararararara")
+    return 0
+
+
+if __name__ == "__main__":
+    main()
