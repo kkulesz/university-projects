@@ -1,0 +1,255 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+]{article}
+\usepackage{amsmath,amssymb}
+\usepackage{lmodern}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\usepackage[margin=1in]{geometry}
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\usepackage{framed}
+\definecolor{shadecolor}{RGB}{248,248,248}
+\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.94,0.16,0.16}{#1}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.77,0.63,0.00}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\BuiltInTok}[1]{#1}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.64,0.00,0.00}{\textbf{#1}}}
+\newcommand{\ExtensionTok}[1]{#1}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ImportTok}[1]{#1}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\NormalTok}[1]{#1}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\RegionMarkerTok}[1]{#1}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same} % disable monospaced font for URLs
+\hypersetup{
+  pdftitle={Zadanie 1},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\title{Zadanie 1}
+\author{}
+\date{\vspace{-2.5em}}
+
+\begin{document}
+\maketitle
+
+\hypertarget{zadanie-1}{%
+\subsection{Zadanie 1}\label{zadanie-1}}
+
+Na początku pobieramy dane i wstępnie je przetwarzamy: nazywamy kolumny
+oraz wybieramy interesujące nas stacje pomiarowe. Wybraliśmy Pszczynę,
+Pułtusk oraz Białowieżę.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{df }\OtherTok{\textless{}{-}} \FunctionTok{read.csv}\NormalTok{(}\StringTok{\textquotesingle{}data/k\_d\_07\_2021.csv\textquotesingle{}}\NormalTok{, }\AttributeTok{header =} \ConstantTok{FALSE}\NormalTok{)}
+\NormalTok{col\_names }\OtherTok{\textless{}{-}} \FunctionTok{c}\NormalTok{(}\StringTok{\textquotesingle{}station\_code\textquotesingle{}}\NormalTok{, }\StringTok{\textquotesingle{}station\_name\textquotesingle{}}\NormalTok{, }\StringTok{\textquotesingle{}year\textquotesingle{}}\NormalTok{, }\StringTok{\textquotesingle{}month\textquotesingle{}}\NormalTok{, }\StringTok{\textquotesingle{}day\textquotesingle{}}\NormalTok{, }
+               \StringTok{\textquotesingle{}T\_MAX\textquotesingle{}}\NormalTok{, }\StringTok{\textquotesingle{}status\_T\_MAX\textquotesingle{}}\NormalTok{, }\StringTok{\textquotesingle{}T\_MIN\textquotesingle{}}\NormalTok{, }\StringTok{\textquotesingle{}status\_T\_MIN\textquotesingle{}}\NormalTok{, }\StringTok{\textquotesingle{}T\_AVG\textquotesingle{}}\NormalTok{, }\StringTok{\textquotesingle{}status\_T\_AVG\textquotesingle{}}\NormalTok{,}
+               \StringTok{\textquotesingle{}T\_MIN\_GROUND\textquotesingle{}}\NormalTok{, }\StringTok{\textquotesingle{}status\_T\_MIN\_GROUND\textquotesingle{}}\NormalTok{, }\StringTok{\textquotesingle{}SUM\_OF\_PRECIPITATION\textquotesingle{}}\NormalTok{, }\StringTok{\textquotesingle{}status\_SUM\_OF\_PRECIPITATION\textquotesingle{}}\NormalTok{,}
+               \StringTok{\textquotesingle{}TYPE\_OF\_RAINFALL\textquotesingle{}}\NormalTok{, }\StringTok{\textquotesingle{}SNOW\_COVER\_HEIGHT\textquotesingle{}}\NormalTok{, }\StringTok{\textquotesingle{}status\_SNOW\_COVER\_HEIGHT\textquotesingle{}}\NormalTok{)}
+\FunctionTok{colnames}\NormalTok{(df) }\OtherTok{\textless{}{-}}\NormalTok{ col\_names}
+
+\NormalTok{our\_stations }\OtherTok{=} \FunctionTok{c}\NormalTok{(}\StringTok{\textquotesingle{}PSZCZYNA\textquotesingle{}}\NormalTok{, }\StringTok{\textquotesingle{}PUŁTUSK\textquotesingle{}}\NormalTok{, }\StringTok{\textquotesingle{}BIAŁOWIEŻA\textquotesingle{}}\NormalTok{)}
+\NormalTok{df }\OtherTok{\textless{}{-}}\NormalTok{ df[df}\SpecialCharTok{$}\NormalTok{station\_name }\SpecialCharTok{\%in\%}\NormalTok{ our\_stations, ]}
+
+\NormalTok{useful\_columns }\OtherTok{\textless{}{-}} \FunctionTok{c}\NormalTok{(}\StringTok{\textquotesingle{}station\_name\textquotesingle{}}\NormalTok{, }\StringTok{\textquotesingle{}year\textquotesingle{}}\NormalTok{, }\StringTok{\textquotesingle{}month\textquotesingle{}}\NormalTok{, }\StringTok{\textquotesingle{}day\textquotesingle{}}\NormalTok{, }\StringTok{\textquotesingle{}T\_MAX\textquotesingle{}}\NormalTok{, }\StringTok{\textquotesingle{}T\_MIN\textquotesingle{}}\NormalTok{, }\StringTok{\textquotesingle{}T\_AVG\textquotesingle{}}\NormalTok{)}
+\NormalTok{df }\OtherTok{\textless{}{-}}\NormalTok{ df[, useful\_columns]}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{zad1-a1}{%
+\subsubsection{zad1 a1}\label{zad1-a1}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{boxplot}\NormalTok{(T\_MAX }\SpecialCharTok{\textasciitilde{}}\NormalTok{ station\_name, df, }\AttributeTok{xlab=}\StringTok{"station"}\NormalTok{, }\AttributeTok{ylab=}\StringTok{"max. temp."}\NormalTok{, }\AttributeTok{main=}\StringTok{"zad1 a1"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{zadanie1_sprawko_files/figure-latex/unnamed-chunk-2-1.pdf}
+
+Uśredniając - najwyższe temperatury w ciągu dnia zostały zanotowane w
+Pułtusku. Różnice są jednak minimalne: - średnia w obrębie jednego
+stopnia Celsujsza, - kwartyle w znacznej mierze nachodzą na siebie. Z
+inżynierskim przybliżeniem możemy stwierdzić, że lipiec 2021 roku był
+tak samo ciepły w tych rejonach Polski.
+
+\hypertarget{zad1-a2}{%
+\subsubsection{zad1 a2}\label{zad1-a2}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{df}\SpecialCharTok{$}\NormalTok{DAILY\_T\_DIFF }\OtherTok{\textless{}{-}}\NormalTok{ df}\SpecialCharTok{$}\NormalTok{T\_MAX }\SpecialCharTok{{-}}\NormalTok{ df}\SpecialCharTok{$}\NormalTok{T\_MIN}
+\FunctionTok{boxplot}\NormalTok{(DAILY\_T\_DIFF }\SpecialCharTok{\textasciitilde{}}\NormalTok{ station\_name, df, }\AttributeTok{xlab=}\StringTok{"station"}\NormalTok{, }\AttributeTok{ylab=}\StringTok{"temp. difference within day"}\NormalTok{, }\AttributeTok{main=}\StringTok{"zad1 a2"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{zadanie1_sprawko_files/figure-latex/unnamed-chunk-3-1.pdf}
+
+Uśredniając, największe dobowe różnice zostały odnotowane ponownie w
+Pułtusku. W tym przypadku średnia różnic jest o kilka stopni Celsjusza
+wyższa od pozostałych dwóch stacji.
+
+\hypertarget{zad-1a3}{%
+\subsubsection{zad 1a3}\label{zad-1a3}}
+
+W celu wykonania tego podpunktu musieliśmy zdefiniować pomocnicze
+funkcje:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\ControlFlowTok{if}\NormalTok{ (}\SpecialCharTok{!}\FunctionTok{require}\NormalTok{(dplyr))}
+  \FunctionTok{install.packages}\NormalTok{(}\StringTok{\textquotesingle{}dplyr\textquotesingle{}}\NormalTok{)}
+\FunctionTok{library}\NormalTok{(dplyr) }\CommentTok{\# for mutate()}
+
+\NormalTok{count\_diff\_between\_days }\OtherTok{\textless{}{-}} \ControlFlowTok{function}\NormalTok{(df)\{}
+  \CommentTok{\# make sure its sorted in ascending way}
+\NormalTok{  sorted }\OtherTok{\textless{}{-}}\NormalTok{ df[}\FunctionTok{order}\NormalTok{(df}\SpecialCharTok{$}\NormalTok{DATE), ]}
+  
+  \CommentTok{\# calculate difference between this and previous day}
+\NormalTok{  result }\OtherTok{\textless{}{-}} \FunctionTok{mutate}\NormalTok{(sorted, }\AttributeTok{DIFF\_MAX\_T\_BETWEEN\_PREVIOUS\_DAY =}\NormalTok{ T\_MAX }\SpecialCharTok{{-}} \FunctionTok{lag}\NormalTok{(T\_MAX))}
+  \FunctionTok{return}\NormalTok{(result)}
+\NormalTok{\}}
+
+
+\NormalTok{count\_diff\_between\_days\_for\_each\_station }\OtherTok{\textless{}{-}} \ControlFlowTok{function}\NormalTok{(df)\{}
+\NormalTok{  station\_dfs }\OtherTok{\textless{}{-}} \FunctionTok{split}\NormalTok{(df, }\FunctionTok{with}\NormalTok{(df, }\FunctionTok{interaction}\NormalTok{(station\_name)), }\AttributeTok{drop =} \ConstantTok{TRUE}\NormalTok{)}
+\NormalTok{  result }\OtherTok{=} \FunctionTok{data.frame}\NormalTok{()}
+  \ControlFlowTok{for}\NormalTok{(station\_df }\ControlFlowTok{in}\NormalTok{ station\_dfs)\{}
+\NormalTok{    station\_result }\OtherTok{\textless{}{-}} \FunctionTok{count\_diff\_between\_days}\NormalTok{(station\_df)}
+\NormalTok{    result }\OtherTok{\textless{}{-}} \FunctionTok{rbind}\NormalTok{(result, station\_result)}
+\NormalTok{  \}}
+  \FunctionTok{return}\NormalTok{ (result)}
+\NormalTok{\}}
+\end{Highlighting}
+\end{Shaded}
+
+Za ich pomocą jesteśmy w stanie w łatwy sposób przetworzyć dane i je
+zobrazować:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{df}\SpecialCharTok{$}\NormalTok{DATE }\OtherTok{\textless{}{-}} \FunctionTok{as.Date}\NormalTok{(}\FunctionTok{paste}\NormalTok{(df}\SpecialCharTok{$}\NormalTok{year, df}\SpecialCharTok{$}\NormalTok{month, df}\SpecialCharTok{$}\NormalTok{day, }\AttributeTok{sep =} \StringTok{"{-}"}\NormalTok{), }\StringTok{"\%Y{-}\%m{-}\%d"}\NormalTok{)}
+\NormalTok{df }\OtherTok{\textless{}{-}} \FunctionTok{subset}\NormalTok{(df, }\AttributeTok{select =} \SpecialCharTok{{-}}\FunctionTok{c}\NormalTok{(year, month, day))}
+\NormalTok{df }\OtherTok{\textless{}{-}} \FunctionTok{count\_diff\_between\_days\_for\_each\_station}\NormalTok{(df)}
+\FunctionTok{boxplot}\NormalTok{(DIFF\_MAX\_T\_BETWEEN\_PREVIOUS\_DAY }\SpecialCharTok{\textasciitilde{}}\NormalTok{ station\_name, df, }\AttributeTok{xlab=}\StringTok{"station"}\NormalTok{, }\AttributeTok{ylab=}\StringTok{"max. temp. diff. between days"}\NormalTok{, }\AttributeTok{main=}\StringTok{"zad1 a3"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{zadanie1_sprawko_files/figure-latex/unnamed-chunk-5-1.pdf}
+
+Uśredniając, we wszystkich analizowanych stacjach wahania temperatury z
+dnia na dzień oscylują w okolicy zera. Jednak, możemy zauważyć, że
+wariancja była najmniejsza w Białowieży, a największa w Pułtusku.
+
+\hypertarget{zad1-b1}{%
+\subsubsection{zad1 b1}\label{zad1-b1}}
+
+Wybraliśmy stację Pułtusk.
+
+Szacowanie parametrów rozkładu normalnego:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{b1\_data }\OtherTok{\textless{}{-}}\NormalTok{ df[df}\SpecialCharTok{$}\NormalTok{station\_name }\SpecialCharTok{==} \StringTok{\textquotesingle{}PUŁTUSK\textquotesingle{}}\NormalTok{, ]}
+\NormalTok{b1\_data }\OtherTok{\textless{}{-}}\NormalTok{b1\_data}\SpecialCharTok{$}\NormalTok{DIFF\_MAX\_T\_BETWEEN\_PREVIOUS\_DAY}
+\NormalTok{b1\_mean }\OtherTok{\textless{}{-}} \FunctionTok{mean}\NormalTok{(b1\_data, }\AttributeTok{na.rm =} \ConstantTok{TRUE}\NormalTok{)}
+\NormalTok{b1\_sd }\OtherTok{\textless{}{-}} \FunctionTok{sd}\NormalTok{(b1\_data, }\AttributeTok{na.rm =} \ConstantTok{TRUE}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+Za ich pomocą możemy narysować:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{hist}\NormalTok{(b1\_data, }\AttributeTok{prob=}\ConstantTok{TRUE}\NormalTok{, }\AttributeTok{xlab=}\StringTok{"max. temp. diff."}\NormalTok{, }\AttributeTok{main=}\StringTok{"zad1 b"}\NormalTok{, }\AttributeTok{xlim=}\FunctionTok{c}\NormalTok{(}\SpecialCharTok{{-}}\DecValTok{10}\NormalTok{,}\DecValTok{10}\NormalTok{))}
+\FunctionTok{curve}\NormalTok{(}\FunctionTok{dnorm}\NormalTok{(x, }\AttributeTok{mean=}\NormalTok{b1\_mean, }\AttributeTok{sd=}\NormalTok{b1\_sd), }\AttributeTok{add=}\ConstantTok{TRUE}\NormalTok{, }\AttributeTok{yaxt=}\StringTok{"n"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{zadanie1_sprawko_files/figure-latex/unnamed-chunk-7-1.pdf}
+
+TODO:
+
+\hypertarget{zad1-b2}{%
+\subsubsection{zad1 b2}\label{zad1-b2}}
+
+TODO
+
+\end{document}

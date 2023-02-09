@@ -1,0 +1,9 @@
+nltk==3.7
+numpy==1.22.3
+pandas==1.4.2
+preprocessor==1.1.3
+scikit_learn==1.1.1
+simpletransformers==0.63.6
+torch==1.11.0+cu113
+tweepy==4.8.0
+tweet_preprocessor==0.6.0

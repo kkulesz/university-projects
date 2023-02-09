@@ -1,0 +1,130 @@
+---
+title: "Zadanie 1"
+output:
+  pdf_document: default
+  word_document: default
+  html_document:
+    df_print: paged
+---
+## Zadanie 1
+Na początku pobieramy dane i wstępnie je przetwarzamy: nazywamy kolumny oraz wybieramy interesujące nas stacje pomiarowe oraz kolumny. Wybraliśmy Pszczynę, Pułtusk oraz Białowieżę.
+
+```{r}
+df <- read.csv('data/k_d_07_2021.csv', header = FALSE)
+col_names <- c('station_code', 'station_name', 'year', 'month', 'day', 
+               'T_MAX', 'status_T_MAX', 'T_MIN', 'status_T_MIN', 'T_AVG', 'status_T_AVG',
+               'T_MIN_GROUND', 'status_T_MIN_GROUND', 'SUM_OF_PRECIPITATION', 'status_SUM_OF_PRECIPITATION',
+               'TYPE_OF_RAINFALL', 'SNOW_COVER_HEIGHT', 'status_SNOW_COVER_HEIGHT')
+colnames(df) <- col_names
+
+our_stations = c('PSZCZYNA', 'PUŁTUSK', 'BIAŁOWIEŻA')
+df <- df[df$station_name %in% our_stations, ]
+
+useful_columns <- c('station_name', 'year', 'month', 'day', 'T_MAX', 'T_MIN', 'T_AVG')
+df <- df[, useful_columns]
+```
+
+
+### zad1 a1
+
+```{r}
+boxplot(T_MAX ~ station_name, df, xlab="station", ylab="max. temp.", main="zad1 a1")
+```
+
+Uśredniając - najwyższe temperatury w ciągu dnia zostały zanotowane w Pułtusku. 
+Różnice są jednak minimalne:
+- średnia w obrębie jednego stopnia Celsujsza,
+- kwartyle w znacznej mierze nachodzą na siebie. 
+Z inżynierskim przybliżeniem możemy stwierdzić, że lipiec 2021 roku był tak samo ciepły w tych rejonach Polski.
+
+### zad1 a2
+```{r}
+df$DAILY_T_DIFF <- df$T_MAX - df$T_MIN
+boxplot(
+  DAILY_T_DIFF ~ station_name, df, xlab="station", 
+  ylab="temp. difference within day", main="zad1 a2"
+)
+
+```
+
+Uśredniając, największe dobowe różnice zostały odnotowane w Pułtusku. W tym przypadku średnia różnic jest o kilka stopni Celsjusza wyższa od pozostałych dwóch stacji.
+
+
+### zad 1a3
+
+W celu wykonania tego podpunktu musieliśmy zdefiniować pomocnicze funkcje:
+```{r, message=FALSE}
+if (!require(dplyr))
+  install.packages('dplyr')
+library(dplyr) # for mutate()
+
+count_diff_between_days <- function(df){
+  # make sure its sorted in ascending way
+  sorted <- df[order(df$DATE), ]
+  
+  # calculate difference between this and previous day
+  result <- mutate(sorted, DIFF_MAX_T_BETWEEN_PREVIOUS_DAY = T_MAX - lag(T_MAX))
+  return(result)
+}
+
+
+count_diff_between_days_for_each_station <- function(df){
+  station_dfs <- split(df, with(df, interaction(station_name)), drop = TRUE)
+  result = data.frame()
+  for(station_df in station_dfs){
+    station_result <- count_diff_between_days(station_df)
+    result <- rbind(result, station_result)
+  }
+  return (result)
+}
+```
+
+
+Za ich pomocą jesteśmy w stanie w łatwy sposób przetworzyć dane i je zobrazować:
+```{r}
+df$DATE <- as.Date(paste(df$year, df$month, df$day, sep = "-"), "%Y-%m-%d")
+df <- subset(df, select = -c(year, month, day))
+df <- count_diff_between_days_for_each_station(df)
+
+boxplot(
+  DIFF_MAX_T_BETWEEN_PREVIOUS_DAY ~ station_name, df, xlab="station", 
+  ylab="max. temp. diff. between days", main="zad1 a3"
+)
+
+```
+
+Uśredniając, we wszystkich analizowanych stacjach wahania temperatury z dnia na dzień oscylują w okolicy zera. Jednak, możemy zauważyć, że wariancja była najmniejsza w Białowieży, a największa w Pułtusku. 
+
+
+### zad1 b1
+Wybraliśmy stację Pułtusk.
+
+Szacowanie parametrów rozkładu normalnego:
+```{r}
+tmp <- df[df$station_name == 'PUŁTUSK', ]
+b1_data <-tmp$DIFF_MAX_T_BETWEEN_PREVIOUS_DAY
+b1_mean <- mean(b1_data, na.rm = TRUE)
+b1_sd <- sd(b1_data, na.rm = TRUE)
+```
+
+Za ich pomocą możemy narysować:
+```{r}
+hist(b1_data, prob=TRUE, xlab="max. temp. diff.", main="zad1 b", xlim=c(-10,10), breaks = 20)
+curve(dnorm(x, mean=b1_mean, sd=b1_sd), add=TRUE, yaxt="n")
+```
+W celu sprawdzenia na ile odpowiednim modelem dla naszych danych będzie rozkład normalny, kilkukrotnie wylosowaliśmy 30 wartości z danego rozkłądu o wyestowyanych parametrach i stwierdziliśmy, że może to być odpowieni model. Jednak, musimy zaznaczanyć, że przy liczebnośći 30 elementów wyestywmoane parametry mogą znacznie odbiegać od rzeczywistego rozkładu, z jakim zostały "wylosowane" (np. dla 1000 elementów histogram o wiele bardziej przypomniałby zadany rozkład).
+
+Poniżej wklejamy fragment kodu odpowiedzialny za wyslosowanie analogicznej próby z analizowanego rozkładu.
+```{r}
+random_data <- rnorm(30, mean=b1_mean, sd=b1_sd)
+```
+
+
+### zad1 b2
+```{r}
+temp_margine <- 2
+withing_margin <- tmp[abs(tmp$DIFF_MAX_T_BETWEEN_PREVIOUS_DAY) <= temp_margine, ]
+print(nrow(withing_margin)/nrow(tmp))
+
+```
+Przy założeniu, że tak "tak samo ciepło jak dzisiaj" oznacza margines w granicy dwóch stopni Celsjusza, to możemy powiedzieć, że jest to prawdopodobne na około 30%. Jednak, musimy wziać poprawkę, że próba 30 dni jest stosunkowo mała, żeby wyciągać tak daleko idące wnioski.

@@ -1,0 +1,28 @@
+1. preprocessing:
+    https://aronakhmad.medium.com/twitter-data-cleaning-using-python-db1ec2f28f08
+    https://pypi.org/project/tweet-preprocessor/
+    https://towardsdatascience.com/basic-tweet-preprocessing-in-python-efd8360d529e
+
+2. maybe useful later
+    https://www.youtube.com/watch?v=pMjT8GIX0co
+    https://github.com/peterzukerman/Twitter-Sarcasm-Detection
+    https://towardsdatascience.com/sarcasm-detection-with-nlp-cbff1723f69a
+    https://medium.com/@robisipos/detecting-sarcasm-in-text-using-pytorch-2e1b3c382dfa
+    https://github.com/rishabhmisra/Sarcasm-Detection-using-NN
+    https://github.com/tomoverman/iSarcasmNU
+    https://github.com/BinaryBlackhole/Pytorch-implementation-twitter-sentiment-analysis-using-RNN
+    https://huggingface.co/mrm8488/t5-base-finetuned-sarcasm-twitter
+
+
+3. papers
+    https://aclanthology.org/2020.figlang-1.7.pdf
+    https://arxiv.org/pdf/2107.02276.pdf
+
+
+
+https://simpletransformers.ai/docs/t5-model/
+https://simpletransformers.ai/docs/binary-classification/
+https://simpletransformers.ai/docs/classification-models/#classificationmodel
+https://towardsdatascience.com/the-guide-to-multi-tasking-with-the-t5-transformer-90c70a08837b
+https://medium.com/mlearning-ai/fine-tuning-bert-for-tweets-classification-ft-hugging-face-8afebadd5dbf
+
