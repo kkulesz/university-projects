@@ -1,0 +1,40 @@
+{
+"Imie":"Bartek",
+"Nazwisko":"Olber",
+"Telefon":"123456789",
+"Data urodzenia":"1999/01/01",
+"Dieta":"Bez zastrzezen",
+"Grupa":"Biedronki",
+}
+{
+"Imie":"Szymon",
+"Nazwisko":"Kubiszewski",
+"Telefon":"123456789",
+"Data urodzenia":"1998/07/12",
+"Dieta":"Bezglutenowa",
+"Grupa":"Biedronki",
+}
+{
+"Imie":"Jakub",
+"Nazwisko":"Galat",
+"Telefon":"123456789",
+"Data urodzenia":"1999/10/22",
+"Dieta":"Bez zastrzezen",
+"Grupa":"Biedronki",
+}
+{
+"Imie":"Arkadiusz",
+"Nazwisko":"Dawid",
+"Telefon":"123456789",
+"Data urodzenia":"1999/03/31",
+"Dieta":"Bezglutenowa",
+"Grupa":"Krasnoludki",
+}
+{
+"Imie":"Konrad",
+"Nazwisko":"Kulesza",
+"Telefon":"123456789",
+"Data urodzenia":"1999/04/14",
+"Dieta":"Wegetarianska",
+"Grupa":"Skrzaty",
+}

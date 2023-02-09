@@ -1,0 +1,10 @@
+make
+
+for i in 1 2 3 4
+do
+./main $i
+echo ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+done
+
+make clean
+echo KONIEC
