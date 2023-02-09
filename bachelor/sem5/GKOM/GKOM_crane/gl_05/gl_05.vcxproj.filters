@@ -1,0 +1,233 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="src\objects\barrelStack.cpp">
+      <Filter>src\objects</Filter>
+    </ClCompile>
+    <ClCompile Include="src\camera.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\objects\composedObject.cpp">
+      <Filter>src\objects</Filter>
+    </ClCompile>
+    <ClCompile Include="src\objects\crane.cpp">
+      <Filter>src\objects</Filter>
+    </ClCompile>
+    <ClCompile Include="src\cranePhysics.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\objects\crate.cpp">
+      <Filter>src\objects</Filter>
+    </ClCompile>
+    <ClCompile Include="src\meshes\cube.cpp">
+      <Filter>src\meshes</Filter>
+    </ClCompile>
+    <ClCompile Include="src\meshes\cuboid.cpp">
+      <Filter>src\meshes</Filter>
+    </ClCompile>
+    <ClCompile Include="src\objects\cuboidObject.cpp">
+      <Filter>src\objects</Filter>
+    </ClCompile>
+    <ClCompile Include="src\meshes\cylinder.cpp">
+      <Filter>src\meshes</Filter>
+    </ClCompile>
+    <ClCompile Include="src\objects\cylindricObject.cpp">
+      <Filter>src\objects</Filter>
+    </ClCompile>
+    <ClCompile Include="src\lights\dirLight.cpp">
+      <Filter>src\lights</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gl_05.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\objects\ground.cpp">
+      <Filter>src\objects</Filter>
+    </ClCompile>
+    <ClCompile Include="src\vertex.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\transform.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\texture.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\skybox.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\scene.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\lights\lampObject.cpp">
+      <Filter>src\lights</Filter>
+    </ClCompile>
+    <ClCompile Include="src\lights\pointLight.cpp">
+      <Filter>src\lights</Filter>
+    </ClCompile>
+    <ClCompile Include="src\material.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\meshes\mesh.cpp">
+      <Filter>src\meshes</Filter>
+    </ClCompile>
+    <ClCompile Include="src\meshes\plane.cpp">
+      <Filter>src\meshes</Filter>
+    </ClCompile>
+    <ClCompile Include="src\objects\rocket.cpp">
+      <Filter>src\objects</Filter>
+    </ClCompile>
+    <ClCompile Include="src\objects\sceneObject.cpp">
+      <Filter>src\objects</Filter>
+    </ClCompile>
+    <ClCompile Include="src\objects\sand.cpp">
+      <Filter>src\objects</Filter>
+    </ClCompile>
+    <ClCompile Include="src\objects\wheel.cpp">
+      <Filter>include\meshes</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include\objects\barrelStack.h">
+      <Filter>include\objects</Filter>
+    </ClInclude>
+    <ClInclude Include="include\camera.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\objects\composedObject.h">
+      <Filter>include\objects</Filter>
+    </ClInclude>
+    <ClInclude Include="include\objects\crane.h">
+      <Filter>include\objects</Filter>
+    </ClInclude>
+    <ClInclude Include="include\cranePhysics.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\objects\crate.h">
+      <Filter>include\objects</Filter>
+    </ClInclude>
+    <ClInclude Include="include\meshes\cube.h">
+      <Filter>include\meshes</Filter>
+    </ClInclude>
+    <ClInclude Include="include\meshes\cuboid.h">
+      <Filter>include\meshes</Filter>
+    </ClInclude>
+    <ClInclude Include="include\objects\cuboidObject.h">
+      <Filter>include\objects</Filter>
+    </ClInclude>
+    <ClInclude Include="include\meshes\cylinder.h">
+      <Filter>include\meshes</Filter>
+    </ClInclude>
+    <ClInclude Include="include\objects\cylindricObject.h">
+      <Filter>include\objects</Filter>
+    </ClInclude>
+    <ClInclude Include="include\lights\dirLight.h">
+      <Filter>include\lights</Filter>
+    </ClInclude>
+    <ClInclude Include="include\objects\ground.h">
+      <Filter>include\objects</Filter>
+    </ClInclude>
+    <ClInclude Include="include\scene.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\shader.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\shprogram.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\texture.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\transform.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\vertex.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\resource.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\lights\pointLight.h">
+      <Filter>include\lights</Filter>
+    </ClInclude>
+    <ClInclude Include="include\lights\lampObject.h">
+      <Filter>include\lights</Filter>
+    </ClInclude>
+    <ClInclude Include="include\meshes\plane.h">
+      <Filter>include\meshes</Filter>
+    </ClInclude>
+    <ClInclude Include="include\meshes\mesh.h">
+      <Filter>include\meshes</Filter>
+    </ClInclude>
+    <ClInclude Include="include\objects\sceneObject.h">
+      <Filter>include\objects</Filter>
+    </ClInclude>
+    <ClInclude Include="include\objects\rocket.h">
+      <Filter>include\objects</Filter>
+    </ClInclude>
+    <ClInclude Include="include\objects\sand.h">
+      <Filter>include\objects</Filter>
+    </ClInclude>
+    <ClInclude Include="include\objects\wheel.h">
+      <Filter>include\objects</Filter>
+    </ClInclude>
+    <ClInclude Include="include\material.h">
+      <Filter>include</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="shaders\lamp.vert">
+      <Filter>shaders</Filter>
+    </None>
+    <None Include="shaders\lamp.frag">
+      <Filter>shaders</Filter>
+    </None>
+    <None Include="shaders\multipleLights.frag">
+      <Filter>shaders</Filter>
+    </None>
+    <None Include="shaders\multipleLights.vert">
+      <Filter>shaders</Filter>
+    </None>
+    <None Include="shaders\shadow.frag">
+      <Filter>shaders</Filter>
+    </None>
+    <None Include="shaders\shadow.vert">
+      <Filter>shaders</Filter>
+    </None>
+    <None Include="shaders\skybox.frag">
+      <Filter>shaders</Filter>
+    </None>
+    <None Include="shaders\skybox.vert">
+      <Filter>shaders</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="src">
+      <UniqueIdentifier>{6264fde8-0ccd-4c8a-aa9c-bf34cb111655}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include">
+      <UniqueIdentifier>{504828fe-49f7-43c6-936d-be62085b0bc1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="shaders">
+      <UniqueIdentifier>{bbc31dab-d2ea-4cc3-8c87-a134426ba7f6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\lights">
+      <UniqueIdentifier>{a9f7f84f-2b02-418d-94d1-d473f7b0f89c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\objects">
+      <UniqueIdentifier>{162cd6d7-e3c6-48fe-9a68-1cfa9b1d4de2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\meshes">
+      <UniqueIdentifier>{306fc766-cb60-492c-92f1-99dc0cf9960b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\lights">
+      <UniqueIdentifier>{89f75b5a-632c-4df2-bab0-3fc413a47f53}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\meshes">
+      <UniqueIdentifier>{bc74bb51-c0aa-41b6-b2a1-5d9d705530c5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\objects">
+      <UniqueIdentifier>{64a5766a-8fdf-4bde-8511-49eaa9109ba5}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

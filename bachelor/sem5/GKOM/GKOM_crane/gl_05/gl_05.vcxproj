@@ -1,0 +1,161 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{B00CDD07-BE64-4A86-8B73-FAC569267C9A}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>gl_05</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.17134.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>$(SolutionDir)\Include;$(VC_IncludePath);$(WindowsSDK_IncludePath);</IncludePath>
+    <LibraryPath>$(SolutionDir)\Lib;$(VC_LibraryPath_x86);$(WindowsSDK_LibraryPath_x86);</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>legacy_stdio_definitions.lib;opengl32.lib;glfw3.lib;glew32s.lib;soil.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <IgnoreSpecificDefaultLibraries>msvcrt.lib; libcmt.lib</IgnoreSpecificDefaultLibraries>
+      <LinkTimeCodeGeneration>UseLinkTimeCodeGeneration</LinkTimeCodeGeneration>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>legacy_stdio_definitions.lib;opengl32.lib;glfw3.lib;glew32s.lib;soil.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <IgnoreSpecificDefaultLibraries>msvcrt.lib; libcmt.lib</IgnoreSpecificDefaultLibraries>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="src\cranePhysics.cpp" />
+    <ClCompile Include="src\lights\dirLight.cpp" />
+    <ClCompile Include="src\lights\lampObject.cpp" />
+    <ClCompile Include="src\lights\pointLight.cpp" />
+    <ClCompile Include="src\meshes\cube.cpp" />
+    <ClCompile Include="src\meshes\cuboid.cpp" />
+    <ClCompile Include="src\meshes\cylinder.cpp" />
+    <ClCompile Include="src\meshes\mesh.cpp" />
+    <ClCompile Include="src\meshes\plane.cpp" />
+    <ClCompile Include="src\objects\barrelStack.cpp" />
+    <ClCompile Include="src\objects\composedObject.cpp" />
+    <ClCompile Include="src\objects\crane.cpp" />
+    <ClCompile Include="src\objects\crate.cpp" />
+    <ClCompile Include="src\objects\cuboidObject.cpp" />
+    <ClCompile Include="src\objects\cylindricObject.cpp" />
+    <ClCompile Include="src\objects\ground.cpp" />
+    <ClCompile Include="src\objects\rocket.cpp" />
+    <ClCompile Include="src\objects\sand.cpp" />
+    <ClCompile Include="src\objects\sceneObject.cpp" />
+    <ClCompile Include="src\objects\wheel.cpp" />
+    <ClCompile Include="src\scene.cpp" />
+    <ClCompile Include="src\skybox.cpp" />
+    <ClCompile Include="src\camera.cpp" />
+    <ClCompile Include="src\gl_05.cpp" />
+    <ClCompile Include="src\material.cpp" />
+    <ClCompile Include="src\texture.cpp" />
+    <ClCompile Include="src\transform.cpp" />
+    <ClCompile Include="src\vertex.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="shaders\lamp.frag" />
+    <None Include="shaders\lamp.vert" />
+    <None Include="shaders\shadow.frag" />
+    <None Include="shaders\shadow.vert" />
+    <None Include="shaders\skybox.frag" />
+    <None Include="shaders\skybox.vert" />
+    <None Include="shaders\multipleLights.frag" />
+    <None Include="shaders\multipleLights.vert" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include\camera.h" />
+    <ClInclude Include="include\cranePhysics.h" />
+    <ClInclude Include="include\lights\dirLight.h" />
+    <ClInclude Include="include\lights\lampObject.h" />
+    <ClInclude Include="include\lights\pointLight.h" />
+    <ClInclude Include="include\material.h" />
+    <ClInclude Include="include\meshes\cube.h" />
+    <ClInclude Include="include\meshes\cuboid.h" />
+    <ClInclude Include="include\meshes\cylinder.h" />
+    <ClInclude Include="include\meshes\mesh.h" />
+    <ClInclude Include="include\meshes\plane.h" />
+    <ClInclude Include="include\objects\barrelStack.h" />
+    <ClInclude Include="include\objects\composedObject.h" />
+    <ClInclude Include="include\objects\crane.h" />
+    <ClInclude Include="include\objects\crate.h" />
+    <ClInclude Include="include\objects\cuboidObject.h" />
+    <ClInclude Include="include\objects\cylindricObject.h" />
+    <ClInclude Include="include\objects\ground.h" />
+    <ClInclude Include="include\objects\rocket.h" />
+    <ClInclude Include="include\objects\sand.h" />
+    <ClInclude Include="include\objects\sceneObject.h" />
+    <ClInclude Include="include\objects\wheel.h" />
+    <ClInclude Include="include\resource.h" />
+    <ClInclude Include="include\scene.h" />
+    <ClInclude Include="include\shader.h" />
+    <ClInclude Include="include\shprogram.h" />
+    <ClInclude Include="include\texture.h" />
+    <ClInclude Include="include\transform.h" />
+    <ClInclude Include="include\vertex.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
