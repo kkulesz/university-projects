@@ -1,0 +1,7 @@
+/home/demongo/EITI/SCZR/repo/SCZR_VoiceChangerSystem/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/demongo/EITI/SCZR/repo/SCZR_VoiceChangerSystem/cmake-build-debug/CMakeFiles/supplier.dir
+/home/demongo/EITI/SCZR/repo/SCZR_VoiceChangerSystem/cmake-build-debug/CMakeFiles/latencyTest.dir
+/home/demongo/EITI/SCZR/repo/SCZR_VoiceChangerSystem/cmake-build-debug/CMakeFiles/supervisor.dir
+/home/demongo/EITI/SCZR/repo/SCZR_VoiceChangerSystem/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/demongo/EITI/SCZR/repo/SCZR_VoiceChangerSystem/cmake-build-debug/CMakeFiles/voiceChanger.dir
+/home/demongo/EITI/SCZR/repo/SCZR_VoiceChangerSystem/cmake-build-debug/CMakeFiles/consumer.dir

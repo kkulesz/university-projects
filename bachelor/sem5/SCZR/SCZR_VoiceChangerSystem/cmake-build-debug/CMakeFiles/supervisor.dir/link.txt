@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/supervisor.dir/src/Supervisor/main.cpp.o CMakeFiles/supervisor.dir/src/alsa.cpp.o  -o supervisor -lasound 

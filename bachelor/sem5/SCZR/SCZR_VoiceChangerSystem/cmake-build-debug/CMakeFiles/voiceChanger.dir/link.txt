@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/voiceChanger.dir/src/VoiceChanger/voiceChanger.cpp.o CMakeFiles/voiceChanger.dir/src/alsa.cpp.o  -o voiceChanger -lasound 
