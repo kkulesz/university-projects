@@ -1,0 +1,32 @@
+name: Tag and Release
+
+on: # on merge to master
+  pull_request:
+    types:
+      - closed
+    branches:
+      - master
+
+jobs:
+  tag_and_realease:
+    runs-on: ubuntu-latest
+    env:
+      GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v3
+      with:
+        ref: ${{ github.event.pull_request.head.sha }}
+        fetch-depth: '0'
+
+    - name: Bump version and push tag
+      uses: anothrNick/github-tag-action@v1
+      env:
+        WITH_V: true
+
+    - name: Release
+      uses: softprops/action-gh-release@v1
+      with:
+        bump_version_scheme: minor
+  

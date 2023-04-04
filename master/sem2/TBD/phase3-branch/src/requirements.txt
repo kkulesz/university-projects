@@ -1,0 +1,4 @@
+h2o==3.38.0.4
+pyspark==3.3.1
+pysparkling==0.6.2
+synapse==2.121.0
